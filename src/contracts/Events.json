@@ -1,0 +1,563 @@
+{
+  "contractName": "Events",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "supplierAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "bloodId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "hospitalAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shippingTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "EventBloodShipped",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "hospital",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "hospitalName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "phoneNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "addedTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "EventHospitalAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "supplier",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "organizationName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "phoneNumber",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "addedTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "EventSupplierAdded",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"supplierAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"bloodId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"hospitalAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"shippingTime\",\"type\":\"uint256\"}],\"name\":\"EventBloodShipped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"hospital\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"hospitalName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"phoneNumber\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"addedTime\",\"type\":\"uint256\"}],\"name\":\"EventHospitalAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"supplier\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"organizationName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"phoneNumber\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"addedTime\",\"type\":\"uint256\"}],\"name\":\"EventSupplierAdded\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/lib/Events.sol\":\"Events\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/lib/Events.sol\":{\"keccak256\":\"0x3d0a2302e41d34cd3b85fc61b1148739ea119ccec140b67c90ceafa16d751f21\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://32557981e5a166d0a3202cf4b53708278e3220a20ec09252bfe6f622728e84d8\",\"dweb:/ipfs/QmUDieP8RXfH6zLitzxSUWarN3ThKNPWbwnFcWQ42veRMG\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea26469706673582212201695a6ca53a646bc455ae239a7bb63c76ac636a3bf2db0b7926c2b33552eafd464736f6c63430008150033",
+  "deployedBytecode": "0x60806040525f80fdfea26469706673582212201695a6ca53a646bc455ae239a7bb63c76ac636a3bf2db0b7926c2b33552eafd464736f6c63430008150033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "68:492:2:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "68:492:2:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.17;\r\n\r\ncontract Events {\r\n  event EventSupplierAdded(\r\n        address supplier,\r\n        string organizationName,\r\n        uint256 phoneNumber,\r\n        uint256 addedTime\r\n    );\r\n    event EventHospitalAdded(\r\n        address hospital,\r\n        string hospitalName,\r\n        uint256 phoneNumber,\r\n        uint256 addedTime\r\n    );\r\n    event EventBloodShipped(\r\n        address supplierAddress,\r\n        uint256 bloodId,\r\n        address hospitalAddress,\r\n        uint256 shippingTime\r\n    );\r\n\r\n}",
+  "sourcePath": "C:\\Users\\21627\\Desktop\\blood_donation\\contracts\\lib\\Events.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/lib/Events.sol",
+    "exportedSymbols": {
+      "Events": [
+        779
+      ]
+    },
+    "id": 780,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 748,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "40:24:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Events",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 779,
+        "linearizedBaseContracts": [
+          779
+        ],
+        "name": "Events",
+        "nameLocation": "77:6:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "eventSelector": "af5569555a5501c2fe458d01733f3a371409eddb75352016d7b5cd77c800006c",
+            "id": 758,
+            "name": "EventSupplierAdded",
+            "nameLocation": "95:18:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 757,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 750,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "supplier",
+                  "nameLocation": "132:8:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 758,
+                  "src": "124:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 749,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 752,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "organizationName",
+                  "nameLocation": "158:16:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 758,
+                  "src": "151:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 751,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "151:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 754,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "phoneNumber",
+                  "nameLocation": "193:11:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 758,
+                  "src": "185:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 753,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 756,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "addedTime",
+                  "nameLocation": "223:9:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 758,
+                  "src": "215:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 755,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "215:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "113:126:2"
+            },
+            "src": "89:151:2"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "4fcd0bfa215e8ae284e0888e150c587b2dad10354f86110eb2ae62a26f0b6890",
+            "id": 768,
+            "name": "EventHospitalAdded",
+            "nameLocation": "252:18:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 767,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 760,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "hospital",
+                  "nameLocation": "289:8:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 768,
+                  "src": "281:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 759,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "281:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 762,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "hospitalName",
+                  "nameLocation": "315:12:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 768,
+                  "src": "308:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 761,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 764,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "phoneNumber",
+                  "nameLocation": "346:11:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 768,
+                  "src": "338:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 763,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 766,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "addedTime",
+                  "nameLocation": "376:9:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 768,
+                  "src": "368:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 765,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "368:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:122:2"
+            },
+            "src": "246:147:2"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "4d59f0468c9ec07c27687d37e38bd6bbf22254a5e0f1cca63c550b9b1b620d7a",
+            "id": 778,
+            "name": "EventBloodShipped",
+            "nameLocation": "405:17:2",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 777,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 770,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "supplierAddress",
+                  "nameLocation": "441:15:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 778,
+                  "src": "433:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 769,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 772,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "bloodId",
+                  "nameLocation": "475:7:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 778,
+                  "src": "467:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 771,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 774,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "hospitalAddress",
+                  "nameLocation": "501:15:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 778,
+                  "src": "493:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 776,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "shippingTime",
+                  "nameLocation": "535:12:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 778,
+                  "src": "527:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 775,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "527:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:132:2"
+            },
+            "src": "399:156:2"
+          }
+        ],
+        "scope": 780,
+        "src": "68:492:2",
+        "usedErrors": [],
+        "usedEvents": [
+          758,
+          768,
+          778
+        ]
+      }
+    ],
+    "src": "40:520:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2023-10-24T13:44:22.200Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
